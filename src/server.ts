@@ -12,10 +12,10 @@ app.use(express.json());
 
 // การเชื่อมต่อ MySQL
 const db = mysql.createConnection({
-    host: 'localhost', // หรือ host ของคุณ
-    user: 'root',      // เปลี่ยนเป็นชื่อผู้ใช้ MySQL ของคุณ (ถ้าจำเป็น)
-    password: '',      // รหัสผ่าน MySQL ของคุณ (ถ้ามี)
-    database: 'mini_project' // ชื่อฐานข้อมูลที่คุณสร้างใหม่
+    host: 'localhost', 
+    user: 'root',  
+    password: '',      
+    database: 'mini_project' 
   });
   
 
