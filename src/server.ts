@@ -6,6 +6,7 @@ import jwt from 'jsonwebtoken';
 import mysql from 'mysql2';
 import { RowDataPacket } from 'mysql2';
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -30,6 +31,8 @@ const storage = multer.diskStorage({
   }
 });
 const upload = multer({ storage });
+
+
 
 app.use('/uploads', express.static('uploads'));
 // สมัครสมาชิก
@@ -125,10 +128,7 @@ app.get('/api/public-expenses', (req: Request, res: Response) => {
     }
     return res.json({ success: true, expenses: results });
   });
-});
-
-
-  
+}); 
   
 
 app.listen(5000, () => console.log('Server running on port 5000'));
