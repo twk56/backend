@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// การเชื่อมต่อ MySQL
+
 const db = mysql.createConnection({
     host: 'localhost', 
     user: 'root',  
@@ -30,8 +30,6 @@ const storage = multer.diskStorage({
   }
 });
 const upload = multer({ storage });
-
-
 
 app.use('/uploads', express.static('uploads'));
 // สมัครสมาชิก
